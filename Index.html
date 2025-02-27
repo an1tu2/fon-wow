@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <style>
+    /* Базовый фон и матричный паттерн */
+    body {
+      background-color: #0A1829;
+    }
+    
+    .matrix-pattern {
+      background-image: radial-gradient(
+        circle at 50% 50%, 
+        rgba(255,255,255,0.05) 1px, 
+        transparent 1px
+      );
+      background-size: 30px 30px;
+    }
+
+    /* Конфигурация particles.js */
+    #particles-js {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Динамический фон -->
+  <div id="particles-js" class="matrix-pattern"></div>
+
+  <script>
+    // Инициализация частиц
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 80 },
+        color: { value: "#FFFFFF" },
+        shape: { type: "circle" },
+        opacity: { value: 0.15 },
+        size: { value: 1.8 },
+        move: {
+          enable: true,
+          speed: 0.6,
+          direction: "none",
+          out_mode: "bounce",
+          trail: 70
+        }
+      }
+    });
+  </script>
+</body>
+</html>
